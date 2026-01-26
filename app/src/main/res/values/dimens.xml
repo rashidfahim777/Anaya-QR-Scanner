@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Common Dimensions -->
+    <dimen name="padding_small">4dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="padding_xlarge">24dp</dimen>
+
+    <!-- Text Sizes -->
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_medium">14sp</dimen>
+    <dimen name="text_large">16sp</dimen>
+    <dimen name="text_xlarge">18sp</dimen>
+    <dimen name="text_xxlarge">24sp</dimen>
+
+    <!-- Button Sizes -->
+    <dimen name="button_height">56dp</dimen>
+    <dimen name="button_corner_radius">28dp</dimen>
+
+    <!-- Card Dimensions -->
+    <dimen name="card_corner_radius">12dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+
+    <!-- Icon Sizes -->
+    <dimen name="icon_small">24dp</dimen>
+    <dimen name="icon_medium">32dp</dimen>
+    <dimen name="icon_large">48dp</dimen>
+
+    <!-- Scanner Frame -->
+    <dimen name="scan_frame_size">300dp</dimen>
+    <dimen name="scan_corner_size">40dp</dimen>
+    <dimen name="scan_corner_thickness">5dp</dimen>
+
+    <!-- History Item -->
+    <dimen name="history_item_height">72dp</dimen>
+    <dimen name="history_icon_size">40dp</dimen>
+</resources>
