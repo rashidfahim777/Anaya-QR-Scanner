@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:titleTextColor="@android:color/white"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <TextView
+        android:id="@+id/tvCharacterName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="JIN"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:background="#F5F5F5"
+        android:gravity="center" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="No moves found"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <!-- HorizontalScrollView with borders -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Left border -->
+        <View
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="#6200EE" />
+
+        <!-- Right border -->
+        <View
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="#6200EE" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- Header Row - REARRANGED COLUMNS -->
+                <LinearLayout
+                    android:id="@+id/headerRow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="#6200EE">
+
+                    <!-- 1. Command Column -->
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/header_border_right">
+
+                        <TextView
+                            android:id="@+id/tvHeaderCommand"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Command"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:padding="12dp" />
+                    </LinearLayout>
+
+                    <!-- 2. Startup Column -->
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/header_border_right">
+
+                        <TextView
+                            android:id="@+id/tvHeaderStartup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Startup"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:padding="12dp" />
+                    </LinearLayout>
+
+                    <!-- 3. Block Column -->
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/header_border_right">
+
+                        <TextView
+                            android:id="@+id/tvHeaderBlock"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Block"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:padding="12dp" />
+                    </LinearLayout>
+
+                    <!-- 4. Hit Column -->
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/header_border_right">
+
+                        <TextView
+                            android:id="@+id/tvHeaderHit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Hit"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:padding="12dp" />
+                    </LinearLayout>
+
+                    <!-- 5. Counter Hit Column -->
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/header_border_right">
+
+                        <TextView
+                            android:id="@+id/tvHeaderCounterHit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Counter"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:padding="12dp" />
+                    </LinearLayout>
+
+                    <!-- 6. Hit Level Column -->
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/header_border_right">
+
+                        <TextView
+                            android:id="@+id/tvHeaderHitLevel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Level"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:padding="12dp" />
+                    </LinearLayout>
+
+                    <!-- 7. Damage Column -->
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/header_border_right">
+
+                        <TextView
+                            android:id="@+id/tvHeaderDamage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Damage"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:padding="12dp" />
+                    </LinearLayout>
+
+                    <!-- 8. Notes Column (no border) -->
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvHeaderNotes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Notes"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:padding="12dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- RecyclerView for Move Rows -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:nestedScrollingEnabled="false"/>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </FrameLayout>
+</LinearLayout>

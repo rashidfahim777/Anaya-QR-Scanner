@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_sort"
+        android:title="Sort By">
+        <menu>
+            <item
+                android:id="@+id/action_sort_startup"
+                android:title="Startup"
+                android:checkable="true" />
+            <item
+                android:id="@+id/action_sort_damage"
+                android:title="Damage"
+                android:checkable="true" />
+            <item
+                android:id="@+id/action_sort_block"
+                android:title="Block Advantage"
+                android:checkable="true" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_filter"
+        android:title="Filter By">
+        <menu>
+            <item
+                android:id="@+id/action_filter_high"
+                android:title="High Hits Only" />
+            <item
+                android:id="@+id/action_filter_mid"
+                android:title="Mid Hits Only" />
+            <item
+                android:id="@+id/action_filter_low"
+                android:title="Low Hits Only" />
+            <item
+                android:id="@+id/action_filter_throw"
+                android:title="Throws Only" />
+            <item
+                android:id="@+id/action_clear_filters"
+                android:title="Clear Filters" />
+        </menu>
+    </item>
+</menu>
